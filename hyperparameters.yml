@@ -1,0 +1,94 @@
+parameters1:
+  learning_rate_a: 0.001
+  gamma: 0.99
+  network_sync_rate: 100
+  replay_memory_size: 100000
+  mini_batch_size: 64
+  epsilon_init: 1
+  epsilon_decay: 0.9995
+  epsilon_min: 0.01
+  hidden_layer_dim: 8
+  num_actions: 8
+  num_states: 6
+
+
+parameters2:
+  learning_rate_a: 0.001
+  gamma: 0.99
+  network_sync_rate: 50
+  replay_memory_size: 10000
+  mini_batch_size: 64
+  epsilon_init: 1
+  epsilon_decay: 0.999
+  epsilon_min: 0.01
+  hidden_layer_dim: 12
+  num_actions: 8
+  num_states: 6
+
+
+parameters3:
+  learning_rate_a: 0.002
+  gamma: 0.99
+  network_sync_rate: 50
+  replay_memory_size: 10000
+  mini_batch_size: 64
+  epsilon_init: 1
+  epsilon_decay: 0.997
+  epsilon_min: 0.05
+  hidden_layer_dim: 16
+  num_actions: 8
+  num_states: 6
+  
+parameters4:
+  learning_rate_a: 0.005
+  gamma: 0.99
+  network_sync_rate: 50
+  replay_memory_size: 10000
+  mini_batch_size: 64
+  epsilon_init: 1
+  epsilon_decay: 0.999
+  epsilon_min: 0.05
+  hidden_layer_dim: 32
+  num_actions: 8
+  num_states: 6
+  
+parameters5:
+  learning_rate_a: 0.002
+  gamma: 0.99
+  network_sync_rate: 50
+  replay_memory_size: 10000
+  mini_batch_size: 64
+  epsilon_init: 1
+  epsilon_decay: 0.999
+  epsilon_min: 0.05
+  hidden_layer_dim: 16
+  num_actions: 8
+  num_states: 6
+  
+parameters6:
+  learning_rate_a: 0.002
+  gamma: 0.99
+  network_sync_rate: 50
+  replay_memory_size: 10000
+  mini_batch_size: 64
+  epsilon_init: 1
+  epsilon_decay: 0.993
+  epsilon_min: 0.05
+  hidden_layer_dim: 16
+  num_actions: 8
+  num_states: 6
+  
+parameters7:
+  learning_rate_a: 0.002
+  gamma: 0.99
+  network_sync_rate: 75
+  replay_memory_size: 10000
+  mini_batch_size: 64
+  epsilon_init: 1
+  epsilon_decay: 0.995
+  epsilon_min: 0.05
+  hidden_layer_dim: 4
+  num_actions: 8
+  num_states: 6
+  
+
