@@ -4,12 +4,15 @@ In this homework, I used a neural netowork with two fully connected hidden layer
 
 The code is based on tutorial series: https://github.com/johnnycode8/dqn_pytorch/tree/main
 
-To test the learnt model, run:
+To test the learnt model(1-9), run:
 python agent.py
 
-To start a training session, uncomment line 300 of agent.py.
+To test the learnt model(10-11), please remove one layer of the network by commenting lines 13 and 21 of dqn.py and run:
+python agent.py
 
-Below are the rewards over episodes from agents trained with eight different parameter sets. Respective parameters can be seen in hyperparameters.yml. I have used Relu activation function with parameter sets 1-5, and sigmoid activation functions with parameter sets 5-7. Except for the set 1, reward, smoothed reward, reward per step and value of epsilon over episodes are shown in figures. For set 1, reward and value of epsilon are presented.
+To start a training session, uncomment line 358 of agent.py.
+
+Below are the rewards over episodes from agents trained with eight different parameter sets. Respective parameters can be seen in hyperparameters.yml. I have used Relu activation function with parameter sets 1-5 and 8-11, and sigmoid activation functions with parameter sets 5-7. Agents with parameter sets 1-9 have 2 hidden layers, while 10-11 has a single hidden layer. I included a parameter norm penalty with the agents 10-11. Agents 9-11 are trained train_num_per_episode times at each episode. Except for the set 1, reward, smoothed reward, reward per step and value of epsilon over episodes are shown in figures. For set 1, reward and value of epsilon are presented. Agents 9 and 11 performed best.
 
 ### Parameter set 1:
 
@@ -130,5 +133,76 @@ Below are the rewards over episodes from agents trained with eight different par
 ![Part 7](runs/parameters7.png)
 
 
-Upon training for 2.5 to 4.5 hours, none of the agets performed to a satisfactory actioning. This may be suggesting the requirement of training for longer durations. 
+### Parameter set 8:
+
+  learning_rate_a: 0.001
+  gamma: 0.99
+  network_sync_rate: 200
+  replay_memory_size: 10000
+  mini_batch_size: 64
+  epsilon_init: 1
+  epsilon_decay: 0.9995
+  epsilon_min: 0.05
+  hidden_layer_dim: 64
+  num_actions: 8
+  num_states: 6
+  
+![Part 8](runs/parameters8.png)
+
+
+### Parameter set 9:
+
+  learning_rate_a: 0.001
+  gamma: 0.97
+  network_sync_rate: 300
+  replay_memory_size: 25000
+  mini_batch_size: 128
+  epsilon_init: 1
+  epsilon_decay: 0.9995
+  epsilon_min: 0.05
+  hidden_layer_dim: 64
+  num_actions: 8
+  num_states: 6
+  train_num_per_episode: 15
+  
+![Part 9](runs/parameters9.png)
+
+
+### Parameter set 10:
+
+  learning_rate_a: 0.001
+  gamma: 0.99
+  network_sync_rate: 300
+  replay_memory_size: 25000
+  mini_batch_size: 64
+  epsilon_init: 1
+  epsilon_decay: 0.9995
+  epsilon_min: 0.05
+  hidden_layer_dim: 64
+  num_actions: 8
+  num_states: 6
+  train_num_per_episode: 1
+  
+![Part 10](runs/parameters10.png)
+
+
+### Parameter set 11:
+
+  learning_rate_a: 0.001
+  gamma: 0.99
+  network_sync_rate: 300
+  replay_memory_size: 25000
+  mini_batch_size: 64
+  epsilon_init: 1
+  epsilon_decay: 0.9995
+  epsilon_min: 0.05
+  hidden_layer_dim: 64
+  num_actions: 8
+  num_states: 6
+  train_num_per_episode: 15
+  
+![Part 11](runs/parameters11.png)
+
+
+Upon training for 18 to 54 hours, only the agent with parameter sets 9 and 11 outperformed the others. This suggests more than one gradient calculations at each episode might help to increase the peformance. Training of 9 and 11 continues to this day.
 
